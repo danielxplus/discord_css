@@ -1,0 +1,130 @@
+body {
+    --window-control-size: 12px;
+}
+
+.winButtons_c38106 {
+    /* background */
+    margin-inline: 4px;
+    padding: 1px;
+    gap: 1px;
+    display: flex;
+}
+
+.winButton_c38106>svg {
+    display: none;
+    /* hide old buttons */
+}
+
+.winButton_c38106 {
+
+    background: none !important;
+    width: calc(var(--window-control-size) * 2);
+}
+
+.winButton_c38106::after {
+    display: block;
+    content: '';
+    height: var(--window-control-size);
+    width: var(--window-control-size);
+    border-radius: 50%;
+}
+
+/* Close button */
+.winButtonClose_c38106 {
+    order: 3;
+    position: relative;
+}
+
+.winButtonClose_c38106::after {
+    background-color: #ff5f57 !important;
+    z-index: 1;
+}
+
+/* Shrink button */
+.winButton_c38106:nth-child(1) {
+    order: 2;
+    position: relative
+}
+
+.winButton_c38106:nth-child(1)::after {
+    background-color: #febc2e !important;
+    z-index: 1;
+}
+
+/* Minimize\ Maximize button */
+.winButtonMinMax_c38106:nth-child(2) {
+    order: 1;
+    position: relative;
+}
+
+.winButtonMinMax_c38106:nth-child(2)::after {
+    background-color: #28c940 !important;
+    z-index: 1;
+}
+
+/* Properties for the hover svgs */
+.winButtons_c38106:hover .winButtonClose_c38106::before,
+.winButtons_c38106:hover .winButton_c38106:nth-child(1)::before,
+.winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    opacity: 60%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+/* Close icon */
+.winButtons_c38106:hover .winButtonClose_c38106::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath fill='%23000000' d='M4.172 4.034a.998.998 0 000 1.414l1.414 1.414-1.414 1.414a.998.998 0 000 1.415.998.998 0 001.414 0L7 8.276l1.414 1.415a.998.998 0 001.414 0 .998.998 0 000-1.415L8.414 6.862l1.414-1.414a.998.998 0 000-1.414.998.998 0 00-1.414 0L7 5.448 5.586 4.034a.998.998 0 00-1.414 0z'/%3E%3C/svg%3E");
+}
+
+/* Yellow minimize icon */
+.winButtons_c38106:hover .winButton_c38106:nth-child(1)::before {
+    top: 49%;
+    left: 56%;
+    transform: translate(-40%, -40%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='14' viewBox='0 0 37 14'%3E%3Cpath fill='%23000000' d='M1.2 1.2c-1.5 1.5-1.5 5.1 0 6.6C2 8.6 7.3 9 18.5 9 35.4 9 37 8.6 37 4.5S35.4 0 18.5 0C7.3 0 2 .4 1.2 1.2z'/%3E%3C/svg%3E");
+}
+
+/* Green maximize icon */
+.winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+    top: 57%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 27 27'%3E%3Cg transform='scale(0.5185)'%3E%3Cpath fill='%23003000' d='M1.1 1.4c-.8.9-1.1 4.5-.9 10L.5 20l10-10 10-10h-9.1C4.8 0 1.9.4 1.1 1.4zM16.5 17l-10 10h9.1c6.6 0 9.5-.4 10.3-1.4.8-.9 1.1-4.5.9-10L26.5 7l-10 10z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+    body {
+        .winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath fill='%23003000' d='M11.214 6.862H7.819A.821.821 0 017 6.043V2.648l4.214 4.214m-8.428 0h3.395c.45 0 .819.369.819.819v3.395L2.786 6.862'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+/* Greyscale when not in focus */
+.platform-win:not(.app-focused) .winButton_c38106::after {
+    background-color: #545454 !important;
+}
+
+/* Hover when not focused */
+.platform-win:not(.app-focused) .winButtons_c38106:hover .winButtonClose_c38106::after {
+    background-color: #c04741 !important;
+}
+
+.platform-win:not(.app-focused) .winButtons_c38106:hover .winButton_c38106:nth-child(1)::after {
+    background-color: #be8d22 !important;
+}
+
+.platform-win:not(.app-focused) .winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::after {
+    background-color: #1e9730 !important;
+}
