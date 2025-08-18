@@ -1,0 +1,78 @@
+/* Quick Switcher */
+/* Source is "https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css" by Dablulite */
+.quickswitcher_ac6cb0 .scroller_ac6cb0 {
+    /* Suggestion box */
+    margin: 0px;
+    border-radius: 0 0 8px 8px;
+    scrollbar-width: none;
+    padding: 4px !important;
+}
+
+.quickswitcher_ac6cb0 .input_ac6cb0 { /* Input box */
+    height: 50px !important;
+}
+
+.quickswitcher_ac6cb0 .input_ac6cb0[value=""] {
+    /* Input Box */
+    border-radius: 8px 8px 0 0;
+}
+
+/* where would you like to go */
+.quickswitcher_ac6cb0 .input_ac6cb0::placeholder {
+    opacity: 100%;
+}
+
+/* Input Box */
+.quickswitcher_ac6cb0 .input_ac6cb0:not([value=""]) {
+    border-radius: 8px 8px 0 0;
+}
+/* Pro tip section */
+.quickswitcher_ac6cb0 .protip_ac6cb0 {
+    display: none;
+}
+
+.backdrop__1a911:has(+ .layer_bc663c .quickswitcher_ac6cb0) {
+    opacity: 0;
+}
+
+/* 🗂 Result item style */
+.result__71961 {
+    background: rgb(0, 98, 255, 0.6) !important;
+    color: inherit;
+}
+/* Hover effect */
+.result__71961:hover {
+  background: rgb(0, 98, 255, 0.6) !important;
+  color: rgb(255, 255, 255) !important;
+}
+.result__71961:not([aria-selected="true"]) {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.result__71961[aria-selected="true"]{
+    background-color: rgba(0, 98, 255, 0.5s) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.quickswitcher_ac6cb0 {
+    background: 0 0 !important;
+    padding: 0px;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+
+    >* {
+        background: inherit !important;
+        background-color: inherit !important;
+    }
+
+    .content__99f8c>div:not(.result__71961):not([aria-hidden=true])>.content__71961 {
+        height: 20px;
+        line-height: 20px;
+
+        >.header__71961 {
+            /* Previous channels */
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+    }
+}
