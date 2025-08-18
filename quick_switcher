@@ -37,12 +37,12 @@
 
 /* 🗂 Result item style */
 .result__71961 {
-    background: rgb(0, 98, 255, 0.6) !important;
+    background: rgb(88, 85, 138, 0.192) !important;
     color: inherit;
 }
 /* Hover effect */
 .result__71961:hover {
-  background: rgb(0, 98, 255, 0.6) !important;
+  background: rgb(88, 85, 138, 0.192) !important;
   color: rgb(255, 255, 255) !important;
 }
 .result__71961:not([aria-selected="true"]) {
