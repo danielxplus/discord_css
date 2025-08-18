@@ -1,7 +1,7 @@
 /* Quick Switcher */
 /* Source is "https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css" by Dablulite */
 :root {
-    --blur-shade: 0, 98, 255, 0.6;
+    --highlight-shade: 0, 98, 255, 0.6;
 }
 .quickswitcher_ac6cb0 .scroller_ac6cb0 {
     /* Suggestion box */
@@ -40,12 +40,12 @@
 
 /* 🗂 Result item style */
 .result__71961 {
-    background: rgb(var(--blur-shade)) !important;
+    background: rgb(var(--highlight-shade)) !important;
     color: inherit;
 }
 /* Hover effect */
 .result__71961:hover {
-  background: rgb(var(--blur-shade)) !important;
+  background: rgb(var(--highlight-shade)) !important;
   color: rgb(255, 255, 255) !important;
 }
 .result__71961:not([aria-selected="true"]) {
