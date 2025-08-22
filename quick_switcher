@@ -1,8 +1,22 @@
-/* Quick Switcher */
 /* Source is "https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css" by Dablulite */
 :root {
+    --blrbg-blur-by: 12px;
     --highlight-shade: 0, 98, 255, 0.6;
 }
+
+/* quickswitch body */
+.container__53cea {
+    background: transparent !important;
+    backdrop-filter: blur(var(--blrbg-blur-by)) !important;
+    padding: 0px !important;
+    /* removes the edges from quickswitcher */
+}
+
+.backdrop__78332 {
+    background: rgba(0, 0, 0, .2) !important;
+    backdrop-filter: blur(3px) !important;
+}
+
 .quickswitcher_ac6cb0 .scroller_ac6cb0 {
     /* Suggestion box */
     margin: 0px;
@@ -11,53 +25,40 @@
     padding: 4px !important;
 }
 
-.quickswitcher_ac6cb0 .input_ac6cb0 { /* Input box */
+.quickswitcher_ac6cb0 .input_ac6cb0 {
+    /* Input box */
     height: 50px !important;
-}
-
-.quickswitcher_ac6cb0 .input_ac6cb0[value=""] {
-    /* Input Box */
     border-radius: 8px 8px 0 0;
-}
-
-/* where would you like to go */
-.quickswitcher_ac6cb0 .input_ac6cb0::placeholder {
     opacity: 100%;
 }
 
-/* Input Box */
-.quickswitcher_ac6cb0 .input_ac6cb0:not([value=""]) {
-    border-radius: 8px 8px 0 0;
-}
 /* Pro tip section */
 .quickswitcher_ac6cb0 .protip_ac6cb0 {
     display: none;
 }
 
-.backdrop__1a911:has(+ .layer_bc663c .quickswitcher_ac6cb0) {
-    opacity: 0;
-}
-
 /* 🗂 Result item style */
 .result__71961 {
     background: rgb(var(--highlight-shade)) !important;
-    color: inherit;
 }
+
 /* Hover effect */
 .result__71961:hover {
-  background: rgb(var(--highlight-shade)) !important;
-  color: rgb(255, 255, 255) !important;
+    background: rgb(var(--highlight-shade)) !important;
 }
+
+/* non-highlight results */
 .result__71961:not([aria-selected="true"]) {
-  background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(255, 0, 0, 0) !important;
 }
-.result__71961[aria-selected="true"]{
-    background-color: rgba(0, 98, 255, 0.5s) !important;
-    color: rgb(255, 255, 255) !important;
+
+/* dark background */
+.scrim_d9cec8 {
+    background: none;
+    backdrop-filter: blur(2px) !important;
 }
 
 .quickswitcher_ac6cb0 {
-    background: 0 0 !important;
     padding: 0px;
     background-color: transparent !important;
     backdrop-filter: blur(10px);
@@ -77,5 +78,25 @@
             margin-top: 0;
             margin-bottom: 4px;
         }
+    }
+}
+
+/* fix for the image viewer thing */
+.carouselModal_d3a6f0>div {
+    >.author__6088c {
+        /* background-color: transparent;
+        backdrop-filter: blur(calc(var(--blrbg-blur-by) * 5));
+        padding: 5px 10px 5px 60px;
+        margin: -5px 0 -5px -60px;
+        border-radius: 8px;
+        width: fit-content; */
+
+        .timestamp__6088c {
+            color: color-mix(in xyz, white 50%, var(--text-muted) 50%);
+        }
+    }
+
+    >.authorAvatar__6088c {
+        z-index: 5;
     }
 }
