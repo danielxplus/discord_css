@@ -40,12 +40,12 @@
 
 /* 🗂 Result item style */
 .result__71961 {
-    background: rgb(var(--highlight-shade)) !important;
+    background: rgb(var(--os-accent-color)) !important;
 }
 
 /* Hover effect */
 .result__71961:hover {
-    background: rgb(var(--highlight-shade)) !important;
+    background: rgb(var(--os-accent-color)) !important;
 }
 
 /* non-highlight results */
