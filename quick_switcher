@@ -9,8 +9,6 @@
     background: transparent !important;
     backdrop-filter: blur(var(--blrbg-blur-by)) !important;
     padding: 0px !important;
-    box-shadow: none !important;
-    /* removes the edges from quickswitcher */
 }
 
 .backdrop__78332 {
@@ -40,12 +38,12 @@
 
 /* 🗂 Result item style */
 .result__71961 {
-    background: rgb(var(--os-accent-color)) !important;
+    background: var(--os-accent-color) !important;
 }
 
 /* Hover effect */
 .result__71961:hover {
-    background: rgb(var(--os-accent-color)) !important;
+    background: var(--os-accent-color) !important;
 }
 
 /* non-highlight results */
