@@ -2,7 +2,7 @@ body {
     --window-control-size: 12px;
 }
 
-.winButtons_c38106 {
+.c38106a3f0c3ca76-winButtons {
     /* background */
     margin-inline: 4px;
     padding: 1px;
@@ -10,18 +10,18 @@ body {
     display: flex;
 }
 
-.winButton_c38106>svg {
+.c38106a3f0c3ca76-winButton>svg {
     display: none;
     /* hide old buttons */
 }
 
-.winButton_c38106 {
+.c38106a3f0c3ca76-winButton {
 
     background: none !important;
     width: calc(var(--window-control-size) * 2);
 }
 
-.winButton_c38106::after {
+.c38106a3f0c3ca76-winButton::after {
     display: block;
     content: '';
     height: var(--window-control-size);
@@ -30,42 +30,42 @@ body {
 }
 
 /* Close button */
-.winButtonClose_c38106 {
+.c38106a3f0c3ca76-winButtonClose {
     order: 3;
     position: relative;
 }
 
-.winButtonClose_c38106::after {
+.c38106a3f0c3ca76-winButtonClose::after {
     background-color: #ff5f57 !important;
     z-index: 1;
 }
 
 /* Shrink button */
-.winButton_c38106:nth-child(1) {
+.c38106a3f0c3ca76-winButton:nth-child(1) {
     order: 2;
     position: relative
 }
 
-.winButton_c38106:nth-child(1)::after {
+.c38106a3f0c3ca76-winButton:nth-child(1)::after {
     background-color: #febc2e !important;
     z-index: 1;
 }
 
 /* Minimize\ Maximize button */
-.winButtonMinMax_c38106:nth-child(2) {
+.c38106a3f0c3ca76-winButtonMinMax:nth-child(2) {
     order: 1;
     position: relative;
 }
 
-.winButtonMinMax_c38106:nth-child(2)::after {
+.c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::after {
     background-color: #28c940 !important;
     z-index: 1;
 }
 
 /* Properties for the hover svgs */
-.winButtons_c38106:hover .winButtonClose_c38106::before,
-.winButtons_c38106:hover .winButton_c38106:nth-child(1)::before,
-.winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonClose::before,
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButton:nth-child(1)::before,
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::before {
     content: "";
     width: 12px;
     height: 12px;
@@ -77,7 +77,7 @@ body {
 }
 
 /* Close icon */
-.winButtons_c38106:hover .winButtonClose_c38106::before {
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonClose::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -85,7 +85,7 @@ body {
 }
 
 /* Yellow minimize icon */
-.winButtons_c38106:hover .winButton_c38106:nth-child(1)::before {
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButton:nth-child(1)::before {
     top: 49%;
     left: 56%;
     transform: translate(-40%, -40%);
@@ -93,7 +93,7 @@ body {
 }
 
 /* Green maximize icon */
-.winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+.c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::before {
     top: 57%;
     left: 62%;
     transform: translate(-50%, -50%);
@@ -102,7 +102,7 @@ body {
 
 @media (min-width: 1920px) and (min-height: 1080px) {
     body {
-        .winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::before {
+        .c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::before {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -112,19 +112,19 @@ body {
 }
 
 /* Greyscale when not in focus */
-.platform-win:not(.app-focused) .winButton_c38106::after {
+.platform-win:not(.app-focused) .c38106a3f0c3ca76-winButton::after {
     background-color: #545454 !important;
 }
 
 /* Hover when not focused */
-.platform-win:not(.app-focused) .winButtons_c38106:hover .winButtonClose_c38106::after {
+.platform-win:not(.app-focused) .c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonClose::after {
     background-color: #c04741 !important;
 }
 
-.platform-win:not(.app-focused) .winButtons_c38106:hover .winButton_c38106:nth-child(1)::after {
+.platform-win:not(.app-focused) .c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButton:nth-child(1)::after {
     background-color: #be8d22 !important;
 }
 
-.platform-win:not(.app-focused) .winButtons_c38106:hover .winButtonMinMax_c38106:nth-child(2)::after {
+.platform-win:not(.app-focused) .c38106a3f0c3ca76-winButtons:hover .c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::after {
     background-color: #1e9730 !important;
 }
